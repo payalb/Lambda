@@ -42,8 +42,12 @@ public class Demo8 {
 		int max=IntStream.of(2,4,6,1).flatMap(x-> IntStream.iterate(x, y-> y+1).limit(10)).max().orElse(0);
 				System.out.println(max);
 		
-			int[][] array= {{2,3},{1,2}};	
+			int[][] array= {{2,3},{1,2}};
+			// {2,3}  {1,2}: 2,3 , 1, 2
 		int max1=Arrays.stream(array).flatMapToInt(x-> Arrays.stream(x)).max().orElse(0);
 		System.out.println(max1);
+		
+		int[] arr1={2,3,4,5,6};
+		Arrays.stream(arr1);
 	}
 }
